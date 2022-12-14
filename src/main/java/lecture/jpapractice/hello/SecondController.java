@@ -1,4 +1,4 @@
-package lecture.jpapractice.controller;
+package lecture.jpapractice.hello;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

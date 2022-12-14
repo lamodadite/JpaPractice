@@ -1,4 +1,4 @@
-package lecture.jpapractice;
+package lecture.jpapractice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +12,10 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .anyRequest().permitAll();
+
+        http.csrf().disable();
+        http.headers().frameOptions().sameOrigin();
+
         return http.build();
     }
 }
